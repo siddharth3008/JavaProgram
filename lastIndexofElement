@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class lastIndexElement
+{
+static int lastIndex(int[] array, int x)
+    {
+        int lastindex=-1;
+        for (int i=0;i<array.length;i++)
+        {
+            if(array[i]==x)
+            {
+                lastindex=i;
+            }
+        }
+        return lastindex;
+    }
+ public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the number of n=");
+        int n=sc.nextInt();
+        int [] array=new int[n];
+        System.out.println("enter"+n+"element=");
+        for (int i=0;i<array.length;i++)
+        {
+            array[i]=sc.nextInt();
+        }
+        System.out.println("enter the value of x=");
+        int x=sc.nextInt();
+       System.out.println("last index of where elemnt found is="+lastIndex(array,x));
+    }
+}
